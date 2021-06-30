@@ -3,7 +3,6 @@ import CardComponent from "./Card/Card";
 import styles from "./Cards.module.css";
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
-import { useState } from "react";
 
 const getPatientsQuery = gql`
     {
@@ -15,7 +14,7 @@ const getPatientsQuery = gql`
 
 const Info = (props) => {
     const {
-        covidData: { confirmed, recovered, deaths, lastUpdate },
+        covidData: { confirmed, recovered, lastUpdate },
     } = props;
     if (!confirmed) {
         return "Loading...";
@@ -25,7 +24,7 @@ const Info = (props) => {
     if (data.loading) {
         return <div>Loading Patients...</div>;
     } else {
-        console.log(data)
+        console.log(data);
         var deceased = data.statusWiseCases.length;
     }
 
