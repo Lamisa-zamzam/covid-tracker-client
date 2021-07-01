@@ -25,15 +25,22 @@ const Info = (props) => {
     if (data.loading) {
         return <div>Loading Patients...</div>;
     } else {
+        // My DB doesn't have that much data at this moment so it will show 0 0 0
+        // To check this functionality, use these lines instead
+
+        // const thisMonth = new Date().getMonth() - 4;
+        // const thisYear = new Date().getFullYear() - 1;
+
         const thisMonth = new Date().getMonth();
-        let thisYear = new Date().getFullYear();
-        let pastYear = new Date().getFullYear() - 1;
+        const thisYear = new Date().getFullYear();
+        const pastYear = new Date().getFullYear() - 1;
         var deceased = 0;
         var recovered = 0;
         var active = 0;
         var lastMonthDeceased = 0;
         var lastMonthRecovered = 0;
         var lastMonthActive = 0;
+        console.log(data);
         data.patients.map((patient) => {
             if (
                 (patient.DateAnnounced.split("/")[1] === "" + thisMonth &&
