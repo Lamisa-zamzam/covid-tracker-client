@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { Line, Bar } from "react-chartjs-2";
+// import { useState, useEffect } from "react";
+import { Bar } from "react-chartjs-2";
 import { gql } from "apollo-boost";
 import { graphql } from "react-apollo";
 
-import { fetchDailyData } from "../../api";
+// import { fetchDailyData } from "../../api";
 
 import styles from "./Chart.module.css";
 
@@ -21,17 +21,17 @@ const Chart = (props) => {
         covidData: { confirmed, recovered, deaths },
         country,
     } = props;
-    const [dailyData, setDailyData] = useState({});
+    // const [setDailyData] = useState({});
 
-    useEffect(() => {
-        const fetchMyAPI = async () => {
-            const initialDailyData = await fetchDailyData();
+    // useEffect(() => {
+    //     const fetchMyAPI = async () => {
+    //         const initialDailyData = await fetchDailyData();
 
-            setDailyData(initialDailyData);
-        };
+    //         setDailyData(initialDailyData);
+    //     };
 
-        fetchMyAPI();
-    }, []);
+    //     fetchMyAPI();
+    // }, []);
 
     const barChart = confirmed ? (
         <Bar

@@ -63,6 +63,7 @@ const Info = (props) => {
                     lastMonthActive++;
                 }
             }
+            return [];
         });
     }
 
