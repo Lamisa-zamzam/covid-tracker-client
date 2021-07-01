@@ -1,8 +1,8 @@
-# Just BLog It
+# COVID-19 Tracker
 
-## Blog Publishing Website
+## Corona Virus Infection Info
 
-This responsive MERN stack website is a platform for writers to publish their blogs. I have implemented [Firebase Authentication System](https://firebase.google.com/docs?authuser=0) for better user experience and [TailwindCSS](https://tailwindcss.com/) for styling. You can create an account using email and password or Google. Blogs are listed shortly on the home page serially and you can read the whole blog by clicking on them. Blogs are stored in the DataBase [Mongodb](https://www.mongodb.com/). Only Admins are allowed to publish and delete blogs and make another admin through the admin dashboard page. This website uses private routing form [React Router](https://reactrouter.com/) and [React Hook Form](https://react-hook-form.com/) for form validation.
+This MERN stack website gives updates on Covid-19. There is data of the active, recovered and deceased cases in Covid of this month and the past month. Also there is bar chart for every country to see their covid data.
 
 # Open [My Live Site](https://mystifying-turing-96de9a.netlify.app/) to see how it works.
 

@@ -10,7 +10,7 @@ import image from "./images/image.png";
 
 // apollo client setup
 const client = new ApolloClient({
-    uri: "http://localhost:5000/graphql",
+    uri: "https://http://glacial-savannah-24805.herokuapp.com/graphql",
 });
 
 class App extends React.Component {
