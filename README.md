@@ -1,47 +1,32 @@
-# Getting Started with Create React App
+# Just BLog It
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Blog Publishing Website
 
-## Available Scripts
+This responsive MERN stack website is a platform for writers to publish their blogs. I have implemented [Firebase Authentication System](https://firebase.google.com/docs?authuser=0) for better user experience and [TailwindCSS](https://tailwindcss.com/) for styling. You can create an account using email and password or Google. Blogs are listed shortly on the home page serially and you can read the whole blog by clicking on them. Blogs are stored in the DataBase [Mongodb](https://www.mongodb.com/). Only Admins are allowed to publish and delete blogs and make another admin through the admin dashboard page. This website uses private routing form [React Router](https://reactrouter.com/) and [React Hook Form](https://react-hook-form.com/) for form validation.
 
-In the project directory, you can run:
+# Open [My Live Site](https://mystifying-turing-96de9a.netlify.app/) to see how it works.
 
-### `npm start`
+### You can also visit [My server](https://frozen-coast-84516.herokuapp.com) form where I am loading data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### My server side code link: [https://github.com/Lamisa-zamzam/just-blog-it-server](https://github.com/Lamisa-zamzam/just-blog-it-server)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+My project includes:
 
-### `npm test`
+1.  [React](https://reactjs.org/docs/getting-started.html),
+2.  [React Router](https://reactrouter.com/),
+3.  [TailwindCSS](https://tailwindcss.com/),
+4.  [Font Awesome](https://fontawesome.com/),
+5.  [Firebase](https://firebase.google.com/docs?authuser=0),
+6.  [React Hook Form](https://react-hook-form.com/),
+7.  [My own APIs to load data](https://frozen-coast-84516.herokuapp.com) and
+8.  [HeroIcon](https://heroicons.dev/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### RoadMap
 
-### `npm run build`
+=> Making the blog publishing facility public\
+=> Making it possible for all users to maintain their own profile\
+=> Enabling all users to edit and deleting their own blogs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-"# covid-tracker-client" 
+Pull requests are welcome. For major changes, please open a issue first and discuss what you would like to change.

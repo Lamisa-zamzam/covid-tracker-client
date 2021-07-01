@@ -10,10 +10,27 @@ import styles from "./Chart.module.css";
 const getPatientsQuery = gql`
     {
         patients {
-            PatientNumber
-            Nationality
             CurrentStatus
             DateAnnounced
+        }
+    }
+`;
+
+const getBookQuery = gql`
+    query GetBook($id: ID){
+        book(id: $id) {
+            id
+            name
+            genre
+            author {
+                id
+                name
+                age
+                books {
+                    name
+                    id
+                }
+            }
         }
     }
 `;
@@ -24,20 +41,6 @@ const Chart = (props) => {
         country,
     } = props;
     const [dailyData, setDailyData] = useState({});
-
-    const displayPatients = () => {
-        const data = props.data;
-        if (data.loading) {
-            return <div>Loading Patients...</div>;
-        } else {
-            console.log(data);
-            return data.patients.map((patient) => {
-                return (
-                    <li key={patient.PatientNumber}>{patient.CurrentStatus}</li>
-                );
-            });
-        }
-    };
 
     useEffect(() => {
         const fetchMyAPI = async () => {
@@ -104,12 +107,24 @@ const Chart = (props) => {
         />
     ) : null;
 
+    const handleDateChange = async (e) => {
+        const date = e.target.value;
+        const dbDate = date.split("-").reverse().join("/");
+
+        // const { data } = await client.query({
+        //     query: getPatientsQuery,
+        //     variables: { DateAnnounced: dbDate },
+        // });
+
+        // console.log(data);
+    };
+
     return (
         <>
+            <input type="date" name="" id="" onChange={handleDateChange} />
             <div className={styles.container}>
                 {country ? barChart : lineChart}
             </div>
-            {displayPatients()}
         </>
     );
 };
