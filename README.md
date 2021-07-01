@@ -20,3 +20,10 @@ My project includes:
 ### Contributing
 
 Pull requests are welcome. For major changes, please open a issue first and discuss what you would like to change.
+
+## To run locally:
+
+1. Clone the repo (git clone)
+2. Install the dependencies (npm install)
+3. run the app with npm start (will run on localhost 3000)
+4. Run the server on port 5000
