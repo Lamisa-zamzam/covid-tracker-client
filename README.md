@@ -6,26 +6,16 @@ This MERN stack website gives updates on Covid-19. There is data of the active, 
 
 # Open [My Live Site](https://zealous-goldberg-d44caf.netlify.app/) to see how it works.
 
-### You can also visit [My server](https://frozen-coast-84516.herokuapp.com) form where I am loading data.
+### You can also visit [My server](http://glacial-savannah-24805.herokuapp.com/) form where I am loading data.
 
-### My server side code link: [https://github.com/Lamisa-zamzam/just-blog-it-server](https://github.com/Lamisa-zamzam/just-blog-it-server)
+### My server side code link: [https://github.com/Lamisa-zamzam/covid-tracker-server](https://github.com/Lamisa-zamzam/covid-tracker-server)
 
 My project includes:
 
 1.  [React](https://reactjs.org/docs/getting-started.html),
-2.  [React Router](https://reactrouter.com/),
-3.  [TailwindCSS](https://tailwindcss.com/),
-4.  [Font Awesome](https://fontawesome.com/),
-5.  [Firebase](https://firebase.google.com/docs?authuser=0),
-6.  [React Hook Form](https://react-hook-form.com/),
-7.  [My own APIs to load data](https://frozen-coast-84516.herokuapp.com) and
-8.  [HeroIcon](https://heroicons.dev/).
-
-### RoadMap
-
-=> Making the blog publishing facility public\
-=> Making it possible for all users to maintain their own profile\
-=> Enabling all users to edit and deleting their own blogs
+2.  [My own GraphQL server to load data](https://frozen-coast-84516.herokuapp.com),
+3.  Material UI,
+4.  Apollo
 
 ### Contributing
 
