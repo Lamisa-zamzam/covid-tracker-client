@@ -16,25 +16,6 @@ const getPatientsQuery = gql`
     }
 `;
 
-const getBookQuery = gql`
-    query GetBook($id: ID){
-        book(id: $id) {
-            id
-            name
-            genre
-            author {
-                id
-                name
-                age
-                books {
-                    name
-                    id
-                }
-            }
-        }
-    }
-`;
-
 const Chart = (props) => {
     const {
         covidData: { confirmed, recovered, deaths },
@@ -75,56 +56,52 @@ const Chart = (props) => {
         />
     ) : null;
 
-    const lineChart = dailyData[0] ? (
-        <Line
-            data={{
-                labels: dailyData.map(({ date }) =>
-                    new Date(date).toLocaleDateString()
-                ),
-                datasets: [
-                    {
-                        data: dailyData.map((data) => data.confirmed),
-                        label: "Infected",
-                        borderColor: "#3333ff",
-                        fill: true,
-                    },
-                    {
-                        data: dailyData.map((data) => data.deaths),
-                        label: "Deaths",
-                        borderColor: "red",
-                        backgroundColor: "rgba(255, 0, 0, 0.5)",
-                        fill: true,
-                    },
-                    {
-                        data: dailyData.map((data) => data.recovered),
-                        label: "Recovered",
-                        borderColor: "green",
-                        backgroundColor: "rgba(0, 255, 0, 0.5)",
-                        fill: true,
-                    },
-                ],
-            }}
-        />
-    ) : null;
+    // const lineChart = dailyData[0] ? (
+    //     <Line
+    //         data={{
+    //             labels: dailyData.map(({ date }) =>
+    //                 new Date(date).toLocaleDateString()
+    //             ),
+    //             datasets: [
+    //                 {
+    //                     data: dailyData.map((data) => data.confirmed),
+    //                     label: "Infected",
+    //                     borderColor: "#3333ff",
+    //                     fill: true,
+    //                 },
+    //                 {
+    //                     data: dailyData.map((data) => data.deaths),
+    //                     label: "Deaths",
+    //                     borderColor: "red",
+    //                     backgroundColor: "rgba(255, 0, 0, 0.5)",
+    //                     fill: true,
+    //                 },
+    //                 {
+    //                     data: dailyData.map((data) => data.recovered),
+    //                     label: "Recovered",
+    //                     borderColor: "green",
+    //                     backgroundColor: "rgba(0, 255, 0, 0.5)",
+    //                     fill: true,
+    //                 },
+    //             ],
+    //         }}
+    //     />
+    // ) : null;
 
     const handleDateChange = async (e) => {
-        const date = e.target.value;
-        const dbDate = date.split("-").reverse().join("/");
-
+        // const date = e.target.value;
+        // const dbDate = date.split("-").reverse().join("/");
         // const { data } = await client.query({
         //     query: getPatientsQuery,
         //     variables: { DateAnnounced: dbDate },
         // });
-
         // console.log(data);
     };
 
     return (
         <>
             <input type="date" name="" id="" onChange={handleDateChange} />
-            <div className={styles.container}>
-                {country ? barChart : lineChart}
-            </div>
+            <div className={styles.container}>{country && barChart}</div>
         </>
     );
 };

@@ -4,7 +4,7 @@
 
 This MERN stack website gives updates on Covid-19. There is data of the active, recovered and deceased cases in Covid of this month and the past month. Also there is bar chart for every country to see their covid data.
 
-# Open [My Live Site](https://mystifying-turing-96de9a.netlify.app/) to see how it works.
+# Open [My Live Site](https://zealous-goldberg-d44caf.netlify.app/) to see how it works.
 
 ### You can also visit [My server](https://frozen-coast-84516.herokuapp.com) form where I am loading data.
 
